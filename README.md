@@ -8,3 +8,4 @@ The screenshoots of the finished app will be updated when the project is complet
 
 #Operations
 Users can only access thier desired information on the app when it is connected to the internet.
+We are working with HTML, CSS, ES6 Javescript, and Python.
