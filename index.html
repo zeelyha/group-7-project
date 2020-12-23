@@ -95,6 +95,7 @@
       <div class="container">
         <div class="section">
           <h2 id="hh">ABOUT</h2>
+          <p class="light">EatAt is a restaurant review app project founded by a team of ladies for the LAW program which is aimed at providing people solutions and ease with restaurants that suits their preferences, budget, location and type of aesthetics.</p>
     
           <!--   Icon Section   -->
           <div class="row">
@@ -103,7 +104,10 @@
                 <h2 class="center yellow-text"><i class="material-icons medium">location_on</i></h2>
                 <h5 class="center">Easy Navigation</h5>
     
-                <p class="light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur in et officia ut vel perferendis saepe ipsum quaerat, delectus sed sequi nobis eos earum praesentium odio error est rem non?</p>
+                <p class="light">The reviews which other users (who have visited and explored said restaurants) would serve as recommendations and a type of guide for new explorers/consumers.
+                  This would help with better decision making and satisfactory services for more people.
+                  There would be ranges of restaurants based on location and choices.
+                  </p>
               </div>
             </div>
     
@@ -112,7 +116,8 @@
                 <h2 class="center yellow-text"><i class="material-icons medium">restaurant_menu</i></h2>
                 <h5 class="center">Quality Meals</h5>
     
-                <p class="light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, iure officia sit quae, fugit repellendus, quibusdam modi animi ratione provident asperiores sunt. Maiores iusto qui asperiores harum voluptas accusamus recusandae.</p>
+                <p class="light">Our application helps you narrow out your preferences and informs your budget so you can go somewhere befitting and get the ultimate experience you should be met with.
+                </p>
               </div>
             </div>
     
@@ -121,7 +126,10 @@
                 <h2 class="center yellow-text"><i class="material-icons medium">attach_money</i></h2>
                 <h5 class="center">Spend Less</h5>
     
-                <p class="light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut temporibus distinctio repudiandae ullam reprehenderit iste, voluptate asperiores eos amet corporis harum consequuntur dolor accusamus quo fugiat sint libero veniam? Iure.</p>
+                <p class="light">Reviews do not lie.
+                  No other person truthful than a dissatisfied customer and even more, one with a satisfactory cruise.
+                  You know this offers you quality that you seek.
+                  </p>
               </div>
             </div>
           </div>
