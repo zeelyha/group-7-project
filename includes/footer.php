@@ -24,10 +24,10 @@
               indicators: false,
               height: 500
             });
-            $(".cont").slice(0, 3).show();
+            $(".cont").slice(0, 6).show();
             $("#loadMore").on("click", function(e){
               e.preventDefault();
-              $(".cont:hidden").slice(0, 3).slideDown();
+              $(".cont:hidden").slice(0, 6).slideDown();
               if($(".cont:hidden").length == 0) {
                 $("#loadMore").text("No Content").addClass("noContent");
               }
