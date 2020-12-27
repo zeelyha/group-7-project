@@ -11,6 +11,7 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">     
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
      <title>EatAt</title>
+     <link href="./assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
      <style>
 
         @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,600,700&display=swap');
@@ -138,6 +139,7 @@
         }
 
     </style>
+    <link href="./css/review.css" rel="stylesheet" >
 </head>
 <body>
     <header class="landing">
