@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 <?php include('includes/config.php') ?>
 <?php include('includes/header.php') ?>
 
 <?php
 
 
+=======
+<?php
+
+$db_conx = mysqli_connect("localhost","root","","group7");
+>>>>>>> 8cf3c53d5506f2be94816b280147501cac514bc5
 
 $report="";
 
@@ -16,7 +22,7 @@ $password   = $_POST['password'];
 
 $selectsql= "SELECT emailmobile,password FROM signup_table WHERE emailmobile='$emailmobile' AND password='$password' LIMIT 1";
 
-$selectQuery=mysqli_query($conn,$selectsql);
+$selectQuery=mysqli_query($db_conx,$selectsql);
 $check = mysqli_num_rows($selectQuery);
 if($check > 0){
 while($row=mysqli_fetch_array($selectQuery)){
@@ -38,6 +44,7 @@ $report .="<div style='color:red;'>Incorrect login details</div>";
 <body>
 <div id="overallWrapper" style="background-color: #fff;">
  <div id="homeAlign">
+ <div id="homeLogo">LOGO</div>
 
 <div><?php echo "$report"; ?></div>
 

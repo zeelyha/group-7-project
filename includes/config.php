@@ -1,8 +1,15 @@
-<?php 
-    $conn = mysqli_connect('localhost','zee','zee123','app');
-    if(!$conn){
-        echo "connection error: " .mysli_connect_error();
-    }
+<?php
+$servername = "localhost";
+$username = "zee";
+$password = "zee123";
+$db = 'app';
 
+// Create connection
+$conn = new mysqli($servername, $username, $password, $db);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
 ?>
-
