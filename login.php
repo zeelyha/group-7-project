@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-<?php include('includes/config.php') ?>
-<?php include('includes/header.php') ?>
-
-<?php
-
-
-=======
 <?php
 
 $db_conx = mysqli_connect("localhost","root","","group7");
->>>>>>> 8cf3c53d5506f2be94816b280147501cac514bc5
 
 $report="";
 
