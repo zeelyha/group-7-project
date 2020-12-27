@@ -119,28 +119,26 @@
 
     <section class="section" id="rest">
         <h2 class="center">All Restaurants</h2>
-        <div class="row">
-            <?php foreach ($rows as $row): ?>
-                <div class="card col s12 m6 l4 cont">
-                    <div class="img"><img src="imgs/pexels-creative-vix-370984.jpg" alt=""></div>
-                    <div class="content">
-                        <div class="title"><?php echo htmlspecialchars($row['name']); ?></div>
-                        <div class="sub-title"><?php echo htmlspecialchars($row['type']); ?></div>
-                        <p>Open Hours:9am-8pm</p>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star-half checked"></span>
+            <div class="row">
+                <?php foreach ($rows as $row): ?>
+                    <div class="card col s12 m6 l3 cont">
+                        <div class="img"><img src="imgs/pexels-creative-vix-370984.jpg" alt=""></div>
+                        <div class="content">
+                            <div class="title"><?php echo htmlspecialchars($row['name']); ?></div>
+                            <div class="sub-title"><?php echo htmlspecialchars($row['type']); ?></div>
+                            <p>Open Hours:9am-8pm</p>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star-half checked"></span>
+                        </div>
+                        <div class="card-action right-align">
+                            <a href="review.php?id=<?php echo $row['id'] ?>">More Info</a>
+                        </div>
                     </div>
-                    <div class="card-action right-align">
-                        <a href="each.php?id=<?php echo $row['id'] ?>">More Info</a>
-                    </div>
-                </div>
-                
-            <?php endforeach; ?>  
-                 
-        </div>
+                <?php endforeach; ?>        
+            </div>
     </section>
     <div class="container"> <a href="#" id="loadMore">Load More</a></div>
    

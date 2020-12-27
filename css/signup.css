@@ -5,8 +5,7 @@ html{
 }
 body{
 padding: 0px;
-margin: 0px;
-background-color: #fff;  
+margin: 0px; 
 font-family:'Source Sans Pro', sans-serif;
 font-size: 100%;
 color: #000;
@@ -45,16 +44,12 @@ width: 100%;
     color: #333;
     margin: auto;
 }
-#homeAlign{
+/*#homeAlign{
     width: 30%;
     height: auto;
     margin: 200px auto;
-}
-#homeLogo{
-width: 50%;
-    height: auto;
-    margin: 0px auto 50px auto;
-}
+} */
+
 #homefieldForm{
 width: 100%;
 height: auto;
