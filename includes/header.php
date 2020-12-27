@@ -123,11 +123,11 @@
             padding: 10px 20px;
         }
         #rest .content .title{
-            font-size: 25px;
+            font-size: 20px;
             font-weight: 600;
         }
         #rest .content .sub-title{
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 600;
             color: #e74c3c;
             line-height: 20px;
@@ -135,6 +135,38 @@
         #rest .content p{
             text-align: justify;
             margin: 10px 0;
+        }
+        .tabs .indicator{
+            background-color: black;
+        }
+        .tabs .tab a:focus, .tabs .tab a:focus.active{
+            background: transparent;
+        }
+        .cont{
+            display: none;
+        }
+        #loadMore {
+            width: 200px;
+            color: #fff;
+            display: block;
+            text-align: center;
+            margin: 20px auto;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            background-color: black;
+            transition: .3s;
+        }
+        #loadMore:hover {
+            color: black;
+            background-color: #fff;
+            border: 1px solid blue;
+            text-decoration: none;
+        }
+        .noContent {
+            color: #000 !important;
+            background-color: transparent !important;
+            pointer-events: none;
         }
 
     </style>
@@ -146,15 +178,15 @@
             <a href="#" class="brand-logo black-text text-brighten-4">Eat<span class="yellow-text">At</span></a>
             <a href="#" class="sidenav-trigger" data-target="mobile-menu"><i class="material-icons black-text">menu</i></a>  
             <ul class="right hide-on-med-and-down">
-              <li><a href="#" class="black-text">Home</a></li>
-              <li><a href="#" class="black-text">Explore</a></li>
+              <li><a href="landing.php" class="black-text">Home</a></li>
+              <li><a href="main.php" class="black-text">Explore</a></li>
               <li><a href="#" class="black-text">About</a></li>
               <li><a href="#" class="black-text">Contact</a></li>
               <li><a href="#"><i class="material-icons medium-icon black-text">person_pin</i></a></li>
             </ul>
             <ul class="sidenav" id="mobile-menu">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Explore</a></li>
+              <li><a href="landing.php">Home</a></li>
+              <li><a href="main.php">Explore</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Contact</a></li>
             </ul>

@@ -17,6 +17,20 @@
               autoplayTimeout: 2000, //2000ms = 2s;
               autoplayHoverPause: true,
             });
+            $('.tabs').tabs();
+            $('.slider').slider({
+              fullWidth: true,
+              indicators: false,
+              height: 500
+            });
+            $(".cont").slice(0, 6).show();
+            $("#loadMore").on("click", function(e){
+              e.preventDefault();
+              $(".cont:hidden").slice(0, 6).slideDown();
+              if($(".cont:hidden").length == 0) {
+                $("#loadMore").text("No Content").addClass("noContent");
+              }
+            });
         });
     </script>
     
