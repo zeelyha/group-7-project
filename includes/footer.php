@@ -1,6 +1,6 @@
 <footer class="section page-footer black lighten-1">
         <footer class="footer-copyright black lighten-1">
-          <div class="container center-align">&copy; 2020 LadiesAtWork</div>
+          <div class="container center-align">&copy; 2020 LadiesAtWork team7</div>
         </footer>
     </footer> 
 
@@ -19,6 +19,10 @@
             });
         });
     </script>
-    
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWiKzQSvSx1E9UXgLQB9jPdhzBS0pR9yM&callback=initMap&libraries=places&v=weekly"
+      defer
+    ></script>
+    <script src="./js/map.js"></script>
 </body>
 </html>
