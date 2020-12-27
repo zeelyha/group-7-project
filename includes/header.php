@@ -173,6 +173,10 @@
 </head>
 <body>
     <header class="landing">
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="signup.php">one</a></li>
+            <li><a href="login.php">two</a></li>
+        </ul>
         <nav class="nav-wrapper transparent fixed">
           <div class="container">
             <a href="#" class="brand-logo black-text text-brighten-4">Eat<span class="yellow-text">At</span></a>
@@ -182,7 +186,7 @@
               <li><a href="main.php" class="black-text">Explore</a></li>
               <li><a href="#" class="black-text">About</a></li>
               <li><a href="#" class="black-text">Contact</a></li>
-              <li><a href="#"><i class="material-icons medium-icon black-text">person_pin</i></a></li>
+              <li><a href="#"><i class="material-icons medium-icon black-text dropdown-trigger" data-target="dropdown1">person_pin</i></a></li>
             </ul>
             <ul class="sidenav" id="mobile-menu">
               <li><a href="landing.php">Home</a></li>

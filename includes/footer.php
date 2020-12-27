@@ -11,6 +11,7 @@
     <script>
         $(document).ready(function(){
             $('.sidenav').sidenav();
+            $(".dropdown-trigger").dropdown();
             $('.slider').owlCarousel({
               loop: true,
               autoplay: true,
