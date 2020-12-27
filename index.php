@@ -13,10 +13,13 @@
      <style>
          @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,600,700&display=swap');
         *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Ubuntu', sans-serif;
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Ubuntu', sans-serif;
+        }
+        html{
+          scroll-behavior: smooth;
         }
         header{
           background:url('imgs/land.jpg') no-repeat center;
@@ -26,10 +29,11 @@
           height: auto;
           
         }
-        /* .home .max-width{
-          margin: auto 0 auto 30px;
-
-        } */
+        @media screen and (max-width:670px){
+          header{
+            min-height: 500px;
+          }
+        }
         .home .home-content .text{
           font-size: 45px;
           font-weight: 350;
@@ -42,20 +46,55 @@
           margin-left: 1000px;
           background-color: darkgoldenrod;
         }
+        .scroll-up-btn{
+          position: fixed;
+          height: 45px;
+          width: 42px;
+          background: black;
+          right: 30px;
+          bottom: 10px;
+          text-align: center;
+          line-height: 45px;
+          color: #fff;
+          z-index: 9999;
+          font-size: 30px;
+          border-radius: 6px;
+          border-bottom-width: 2px;
+          cursor: pointer;
+          opacity: 0;
+          pointer-events: none;
+          transition: all 0.3 ease;
+        }
+        .scroll-up-btn.show{
+          bottom: 30px;
+          opacity: 1;
+          pointer-events: auto;
+        }
+        .scroll-up-btn:hover{
+          filter: brightness(90%);
+        }
      </style>
 
 </head>
 <body>
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>   
     <header>
+        <ul id="dropdown1" class="dropdown-content">
+          <li><a href="signup.php">Sign Up</a></li>
+          <li><a href="login.php">Log In</a></li>
+          <li class="divider"></li>
+        </ul>
         <nav class="nav-wrapper transparent fixed">
           <div class="container">
             <a href="#" class="brand-logo white-text text-brighten-4">Eat<span class="yellow-text">At</span></a>
             <a href="#" class="sidenav-trigger" data-target="mobile-menu"><i class="material-icons">menu</i></a>  
             <ul class="right hide-on-med-and-down">
-              <li><a href="#" class="white-text">Home</a></li>
-              <li><a href="#" class="white-text">Explore</a></li>
-              <li><a href="#" class="white-text">About</a></li>
-              <li><a href="#" class="white-text">Contact</a></li>
+              <li><a href="index.php" class="white-text">Home</a></li>
+              <li><a href="main.php" class="white-text">Explore</a></li>
+              <li><a href="#about" class="white-text">About</a></li>
+              <li><a href="#contact" class="white-text">Contact</a></li>
               <li><a href="#" class="tooltipped btn-floating btn-small black" data-tooltip="Facebook">
                 <i class="fab fa-facebook"></i>
               </a></li>
@@ -71,13 +110,13 @@
                     </div>
                 </form>
               </li>
-              <li><a href="#"><i class="material-icons medium-icon white-text">person_pin</i></a></li>
+              <li><a href="#"><i class="material-icons medium-icon white-text dropdown-trigger" data-target="dropdown1">person_pin</i></a></li>
             </ul>
             <ul class="sidenav" id="mobile-menu">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Explore</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="index.php">Home</a></li>
+              <li><a href="main.php">Explore</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
           
@@ -93,7 +132,7 @@
       </header>
 
       <div class="container">
-        <div class="section">
+        <div class="section" id='about'>
           <h2 id="hh">ABOUT</h2>
           <p class="light">EatAt is a restaurant review app project founded by a team of ladies for the LAW program which is aimed at providing people solutions and ease with restaurants that suits their preferences, budget, location and type of aesthetics.</p>
     
@@ -192,6 +231,11 @@
       <script>
         $(document).ready(function(){
           $('.sidenav').sidenav();
+          $('.scroll-up-btn').click(function(){
+            $('html').animate({scrollTop: 0});
+            //removing smooth scroll on slide-up button click
+            $('html').css("scrollBehavior", "auto");
+          });
         });
       </script>
       

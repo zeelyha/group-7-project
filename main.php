@@ -1,4 +1,22 @@
-<?php include('includes/header.php'); ?>
+<?php include('includes/config.php') ?>
+<?php 
+    //query for all restaurants
+    $sql = "SELECT id, name, type FROM restaurant";
+
+    //make query and get results
+    $result = mysqli_query($conn, $sql);
+
+    //fetch resulting rows as an array
+    $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+    //free result from memory
+    mysqli_free_result($result);
+
+    //close connection
+    mysqli_close($conn);
+?>
+
+<?php include('includes/header.php') ?>
 
 
 
@@ -101,98 +119,28 @@
 
     <section class="section" id="rest">
         <h2 class="center">All Restaurants</h2>
-        <div class="row">
-            <div class="card col s12 m6 l4">
-                <div class="img"><img src="imgs/pexels-creative-vix-370984.jpg" alt=""></div>
-                <div class="content">
-                    <div class="title">ColdStone Creamery</div>
-                    <div class="sub-title">Ice Cream</div>
-                    <p>Open Hours:9am-8pm</p>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star-half checked"></span>
-                </div>
+            <div class="row">
+                <?php foreach ($rows as $row): ?>
+                    <div class="card col s12 m6 l3 cont">
+                        <div class="img"><img src="imgs/pexels-creative-vix-370984.jpg" alt=""></div>
+                        <div class="content">
+                            <div class="title"><?php echo htmlspecialchars($row['name']); ?></div>
+                            <div class="sub-title"><?php echo htmlspecialchars($row['type']); ?></div>
+                            <p>Open Hours:9am-8pm</p>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star-half checked"></span>
+                        </div>
+                        <div class="card-action right-align">
+                            <a href="review.php?id=<?php echo $row['id'] ?>">More Info</a>
+                        </div>
+                    </div>
+                <?php endforeach; ?>        
             </div>
-        
-            <div class="card col s12 m6 l4">
-                <div class="img"><img src="imgs/pexels-asad-photo-maldives-1449775.jpg" alt=""></div>
-                <div class="content">
-                    <div class="title">Name</div>
-                    <div class="sub-title">Type</div>
-                    <p>Open Hours:9am-8pm</p>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star-half checked"></span>
-                </div>
-            </div>
-            <div class="card col s12 m6 l4 ">
-                <div class="img"><img src="imgs/nick-karvounis-Ciqxn7FE4vE-unsplash.jpg" alt=""></div>
-                <div class="content">
-                    <div class="title">Name</div>
-                    <div class="sub-title">Type</div>
-                    <p>Open Hours:</p>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star-half checked"></span>
-                </div>
-            </div>    
-        </div>
-        <div class="row">
-            <div class="card col s12 m6 l3">
-                <div class="img"><img src="imgs/land.jpg" alt=""></div>
-                <div class="content">
-                    <div class="title">Name</div>
-                    <div class="sub-title">Type</div>
-                    <p>Open Hours:</p>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star-half checked"></span>
-                </div>
-            </div>
-
-            <div class="card col s12 m6 l3">
-                <div class="img"><img src="imgs/land.jpg" alt=""></div>
-                <div class="content">
-                    <div class="title">Name</div>
-                    <div class="sub-title">Type</div>
-                    <p>Open Hours:</p>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star-half checked"></span>
-                </div>
-            </div>
-
-            <div class="card col s12 m6 l3">
-                <div class="img"><img src="imgs/land.jpg" alt=""></div>
-                <div class="content">
-                    <div class="title">Name</div>
-                    <div class="sub-title">Type</div>
-                    <p>Open Hours:</p>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star-half checked"></span>
-                </div>
-            </div>
-        </div>
     </section>
+    <div class="container"> <a href="#" id="loadMore">Load More</a></div>
+   
 
-
-
-
-
-
-
-
-    <?php include('includes/footer.php'); ?>
+    <?php include('includes/footer.php') ?>
