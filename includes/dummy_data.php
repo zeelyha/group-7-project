@@ -1,6 +1,6 @@
 <?php
-$lorem = 'Restaurant is good for everyone, especially for family with kids.
-They have outside and inside places for guests and playground for kids that become comfortable for couples with kids.  The waiters are funny, always smile,dishes, drinks, cocktails are not expensive. You can also watch football matches there. We ve got relax and our kids were happy.';
+$lorem = 'Restaurant has amazing and comfortable ambience with affordable meals & drinks.
+They have outdoor and indoor spaces for guests, also a good play space for children. The waiters offered impeccable customer service.';
 $reviews = [
     array('review' => $lorem, 'reviewer' => 'Ijay', 'review_date' => '2day'),
     array('review' => $lorem, 'reviewer' => 'Ngozi', 'review_date' => '5day'),
