@@ -1,0 +1,17 @@
+
+body{ 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: red;
+    color: rgb(245, 245, 245);
+    background: linear-gradient( rgba(0,0,0,0.65),rgba(0,0,0,0.65),rgba(0,0,0,0.38),rgba(0,0,0,0)
+    ) 
+    ,url(restuarant.jpg)no-repeat;
+    background-size: cover;
+c
+    }
+
+    .box ul li a{ text-decoration: none;
+    color: antiquewhite;}
+
+    .box ul li:hover{ background-color: darkolivegreen;} 
+    .box ul li a:hover{ color: whitesmoke;}c
