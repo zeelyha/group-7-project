@@ -1,25 +1,29 @@
-<?php 
-$db_conx = mysqli_connect("localhost", "root", "", "group7");
+<?php include('includes/config.php') ?>
+<?php
+  include('includes/header.php');
+  
 
 
-if (isset($_POST['fullname']) && isset($_POST['username']) && isset($_POST['emailMobile']) && isset($_POST['password']) && isset($_POST['submit']) && !empty($_POST['fullname']) && !empty($_POST['username']) && !empty($_POST['emailMobile']) && !empty($_POST['password'])){
 
-$fullname = $_POST['fullname'];
-$username = $_POST['username'];
-$emailMobile = $_POST['emailMobile'];
-$password = $_POST['password'];
-$password = 
-// inserting into dataBase
-$insertData = "INSERT INTO signup_table(id,fullname,username,emailmobile,password,datemade) VALUES (NULL, '$fullname', '$username', '$emailMobile', '$password',NOW())";
-$insertQuery = mysqli_query($db_conx, $insertData);
 
-if($insertQuery){
-	echo "inserted";
-}
- else {
-	echo "not in db";
-}
-}
+  if (isset($_POST['fullname']) && isset($_POST['username']) && isset($_POST['emailmobile']) && isset($_POST['password']) && isset($_POST['submit']) && !empty($_POST['fullname']) && !empty($_POST['username']) && !empty($_POST['emailmobile']) && !empty($_POST['password'])){
+
+    $fullname = $_POST['fullname'];
+    $username = $_POST['username'];
+    $emailmobile = $_POST['emailmobile'];
+    $password = $_POST['password'];
+ 
+    // inserting into dataBase
+    $insertData = "INSERT INTO signup_table(id,fullname,username,emailmobile,password,datemade) VALUES (NULL, '$fullname', '$username', '$emailmobile', '$password',NOW())";
+    $insertQuery = mysqli_query($conn, $insertData);
+
+    if($insertQuery){
+	    echo "inserted";
+    }
+    else{
+	    echo "not in db";
+    }
+  }
 ?>
 
 
@@ -54,7 +58,6 @@ if($insertQuery){
 
 <div id="overAllWrapper">
  <div id="homeAlign">
- <div id="homeLogo"></div>
  <div id="homefieldForm">
  <form action="<?PHP echo $_SERVER['PHP_SELF']; ?>" method="POST">
  <div id="hffDivider">
@@ -70,7 +73,7 @@ if($insertQuery){
 
 
  <div id="hffDivider">
- <div id="hffDividerForm"><input type="text" name="emailMobile" id="authInput" placeholder="Email address or mobile number" /></div> 
+ <div id="hffDividerForm"><input type="text" name="emailmobile" id="authInput" placeholder="Email address or mobile number" /></div> 
  <div id="hffDividerMessage"></div>   
  </div>
 
