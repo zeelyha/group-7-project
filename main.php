@@ -134,7 +134,7 @@
                             <span class="fa fa-star-half checked"></span>
                         </div>
                         <div class="card-action right-align">
-                            <a href="review.php?id=<?php echo $row['id'] ?>">More Info</a>
+                            <a href="restaurant.php?id=<?php echo $row['id'] ?>">More Info</a>
                         </div>
                     </div>
                 <?php endforeach; ?>        

@@ -175,9 +175,7 @@
     <link href="./css/review.css" rel="stylesheet" >
 </head>
 <body>
-    <div class="scroll-up-btn">
-        <i class="fas fa-angle-up"></i>
-    </div> 
+    
     <header class="landing">
         <ul id="dropdown1" class="dropdown-content">
             <li><a href="signup.php">Sign Up</a></li>
