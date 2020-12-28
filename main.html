@@ -170,8 +170,12 @@
 
     <div class="container center">
             <div class="input-field">
-                <input name="search" placeholder="Search..." type="search" required>
-                <i id="icon" class="material-icons small-icon inline black-text">search</i>
+                <form action="main.php" method="POST">
+                    Search <input name="search" placeholder="Search..." type="text" required>
+                    <i id="icon" class="material-icons small-icon inline black-text">search</i>
+                    <input type="submit">
+                </form>
+                
             </div>
     </div>
 
