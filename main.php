@@ -1,7 +1,7 @@
 <?php include('includes/config.php') ?>
 <?php 
     //query for all restaurants
-    $sql = "SELECT id, name, type FROM restaurant";
+    $sql = "SELECT id, name, type, image FROM restaurant";
 
     //make query and get results
     $result = mysqli_query($conn, $sql);
@@ -18,38 +18,13 @@
 
 <?php include('includes/header.php') ?>
 
-<?php
-$search = $_POST['search'];
-$servername = "localhost";
-$username = "zee";
-$password = "zee123";
-$db = "restaurant";
-
-$conn = new mysqli(localhost, zee, zee123, restaurant);
-if($conn->connect_error){
-    die("Connection failed:". $conn->connection_error);
-}
-$sql = "select * from restaurants where name like '%$search%'";
-$result = $conn->query($sql);
-if ($result->num_rows > 0){
-    while($row = $result ->fetch_assoc() ){
-        echo $row["name"]."";
-    }
-}else{
-    echo " 0 records";
-}
-$conn -> close();
-?>
-
-
-
     <div class="container center">
         <div class="input-field">
-                            <form action="main.php" method="POST">
-                    Search <input name="search" placeholder="Search..." type="text" required>
+            <form action="main.php" method="POST">
+                Search <input name="search" placeholder="Search..." type="text" required>
                     <i id="icon" class="material-icons small-icon inline black-text">search</i>
                     <input type="submit">
-                </form>
+            </form>
         </div>
     </div>
 
@@ -114,7 +89,7 @@ $conn -> close();
             </div>
         </div>
         <div class="card">
-            <div class="img"><img src="imgs/pexels-asad-photo-maldives-1449775.jpg" alt=""></div>
+            <div class="img"><img src="imgs/one.jpg" alt=""></div>
             <div class="content">
                 <div class="title">Dominos</div>
                 <div class="sub-title">Pizza</div>
@@ -148,7 +123,7 @@ $conn -> close();
             <div class="row">
                 <?php foreach ($rows as $row): ?>
                     <div class="card col s12 m6 l3 cont">
-                        <div class="img"><img src="imgs/pexels-creative-vix-370984.jpg" alt=""></div>
+                        <div class="img"><img src="./imgs/<?php echo $row['image'] ?>" alt=""></div>
                         <div class="content">
                             <div class="title"><?php echo htmlspecialchars($row['name']); ?></div>
                             <div class="sub-title"><?php echo htmlspecialchars($row['type']); ?></div>
