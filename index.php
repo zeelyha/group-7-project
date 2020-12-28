@@ -125,7 +125,7 @@
           <div class="max-width">
             <div class="home-content">
               <div class="text white-text">Your Guide to Quality Meals!</div>
-              <button class="btn btn-medium">Explore</button>
+              <a href="main.php"><button class="btn btn-medium">Explore</button></a>
             </div>
           </div>
         </section>
