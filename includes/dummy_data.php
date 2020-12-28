@@ -1,12 +1,5 @@
 <?php
-$lorem = 'Restaurant is good for everyone, especially for family with kids.
-They have outside and inside places for guests and playground for kids that become comfortable for couples with kids.  The waiters are funny, always smile,dishes, drinks, cocktails are not expensive. You can also watch football matches there. We ve got relax and our kids were happy.';
-//$reviews = [
-  //  array('review' => $lorem, 'reviewer' => 'Ijay', 'review_date' => '2day'),
-   // array('review' => $lorem, 'reviewer' => 'Ngozi', 'review_date' => '5day'),
-    //array('review' => $lorem, 'reviewer' => 'Adeola', 'review_date' => '10day'),
-   // array('review' => $lorem, 'reviewer' => 'Sophia', 'review_date' => '10day'),
-//];
+
 
 $rest = [
     array('open' => '9am - 9pm', 'image' => 'one.jpg', 'address' => '50 Raymond Njoku Street, Ikoyi Lagos, Ikoyi Nigeria.'),

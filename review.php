@@ -8,7 +8,7 @@
     
 </section>
 
-<div id="desc">EatAt is a review platform that create or reinforce a communal spirit and influence the consumer's decision. EatAt helps people to seek external information on sources when they have not experienced it themselves. </div>
+<div id="desc">EatAt is a review platform that create a communal spirit and influence the consumer's decision. EatAt helps people to seek external information on sources when they have not experienced it themselves. </div>
 
 <!-- <div class="container" id="info">
     <div class="row">
