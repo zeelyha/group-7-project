@@ -1,7 +1,7 @@
 <?php
     include('includes/config.php');
     include_once('./includes/header.php');
-    //require_once('./includes/dummy_data.php');
+    
 ?>
 
 <?php 
