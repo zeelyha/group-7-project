@@ -1,7 +1,7 @@
 # group-7-project
 <<<<<<< HEAD
 A Restaurant Review Web app
-For your comfort, preference, pocket, & ovral satisfaction
+For your comfort, preference, pocket, & overall satisfaction
 =======
 #Project Overview:
 A Restaurant Review Web App that enables users to make review of restaurants in their city. Restaurant Review Web App is a project developed by group 7 members from web beginners' class of the Ladies at Work program organized by Pearls Africa Foundation in the year 2020.

@@ -1,8 +1,8 @@
 <?php
   $servername = "localhost";
-  $username = "zee";
-  $password = "zee123";
-  $db = 'app';
+  $username = "root";
+  $password = "";
+  $db = 'group7';
 
   // Create connection
   $conn = new mysqli($servername, $username, $password, $db);

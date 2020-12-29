@@ -1,7 +1,8 @@
-<?php include('includes/config.php') ?>
+
 <?php
-  include('includes/header.php');
-  
+  session_start();
+  require_once('./includes/functions.php');
+  $report="";
 
 
 
@@ -13,45 +14,23 @@
     $emailmobile = $_POST['emailmobile'];
     $password = $_POST['password'];
  
-    // inserting into dataBase
-    $insertData = "INSERT INTO signup_table(id,fullname,username,emailmobile,password,datemade) VALUES (NULL, '$fullname', '$username', '$emailmobile', '$password',NOW())";
-    $insertQuery = mysqli_query($conn, $insertData);
+    $res = register($emailmobile, $password, $fullname, $username);
 
-    if($insertQuery){
-	    echo "inserted";
+
+
+    if(is_array($res)){
+        $_SESSION['user'] = $res;
+        if(isset($_SESSION['redirect']))
+          header('location:'.$_SESSION['redirect']);
+        
+        header('location: index.php');
+    }else{
+        $report .="<div style='color:red;'>".$res."</div>";	
     }
-    else{
-	    echo "not in db";
-    }
-  }
+    
+}
+  include('includes/header.php');
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="css/signup.css">
-	<title></title>
-</head>
-<body>
-
 
 
 
@@ -59,6 +38,7 @@
 <div id="overAllWrapper">
  <div id="homeAlign">
  <div id="homefieldForm">
+ <h3><?php echo $report; ?></h3>
  <form action="<?PHP echo $_SERVER['PHP_SELF']; ?>" method="POST">
  <div id="hffDivider">
  <div id="hffDividerForm"><input type="text" name="fullname" id="authInput" placeholder="Full name" /></div> 

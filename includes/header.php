@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -292,7 +293,10 @@
               <li><a href="main.php" class="black-text">Explore</a></li>
               <li><a href="#about" class="black-text">About</a></li>
               <li><a href="#contact" class="black-text">Contact</a></li>
-              <li><a href="#"><i class="material-icons medium-icon black-text dropdown-trigger" data-target="dropdown1">person_pin</i></a></li>
+              
+              <li><a href="#">
+                <i class="material-icons medium-icon black-text dropdown-trigger" data-target="dropdown1">
+                    person_pin</i></a></li>
             </ul>
             <ul class="sidenav" id="mobile-menu">
               <li><a href="index.php">Home</a></li>

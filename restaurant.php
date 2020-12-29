@@ -1,5 +1,22 @@
 <?php
-    include('includes/config.php');
+    session_start();
+    require_once('includes/config.php');
+    include('includes/functions.php');
+    $response = '';
+    if(!empty($_POST['review']) &&$_POST['review'] != ''){
+        $review = $_POST['review'];
+        if(!isset($_SESSION['user'])){
+            $_SESSION['redirect'] = $_SERVER['PHP_SELF'];
+            header('location: login.php');
+        }
+        else{
+            $response = addReview($_SESSION['user']['user_id'], $_GET['id'], $review);
+        }
+        
+    } else{
+        $response = 'Can not submit an empty review.';
+    }
+    
     include_once('./includes/header.php');
     
 ?>
@@ -90,8 +107,9 @@
 
         <div>
             <h6>Leave a review</h6>
-            <form action="#" method="POST">
-                <textarea class="form-control" id="reviewArea" rows="4"></textarea>
+            <div><?php echo $response; ?></div>
+            <form action="restaurant.php?id=<?php echo $_GET['id']; ?>" method="POST">
+                <textarea class="form-control" id="reviewArea" rows="4" name='review'></textarea>
                 <button type="submit" class="btn btn-danger">Submit</button>
             </form>
         </div>
