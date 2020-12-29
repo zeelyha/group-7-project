@@ -41,6 +41,7 @@
         .slider{
             max-width: 1400px;
             display: flex;
+            margin-top: 90px;
         }
         .slider .card{
             flex: 1;
@@ -169,7 +170,108 @@
             background-color: transparent !important;
             pointer-events: none;
         }
-       
+        #cap{
+            margin-top:150px;
+        }
+        .wrapper{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            margin-top: 60px;
+        }
+
+        .wrapper .search_box{
+            width: 500px;
+            background: #fff;
+            border-radius: 5px;
+            height: 65px;
+            display: flex;
+            padding: 10px;
+            box-shadow: 0 8px 6px -10px #28262c;
+        }
+
+        .wrapper .search_box .dropdown{
+            width: 150px;
+            border-right: 2px solid #28262c;
+            color: black;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .wrapper .search_box .dropdown .default_option{
+            text-transform: uppercase;
+            padding: 13px 15px;
+            font-size: 14px;
+        }
+
+        .wrapper .search_box .dropdown ul{
+            position: absolute;
+            top: 70px;
+            left: -10px;
+            background: #fff;
+            width: 150px;
+            border-radius: 5px;
+            padding: 20px;
+            display: none;
+            box-shadow: 8px 8px 6px -10px #28262c;
+        }
+
+        .wrapper .search_box .dropdown ul.active{
+            display: block;
+        }
+
+        .wrapper .search_box .dropdown ul li{
+            padding-bottom: 20px;
+        }
+
+        .wrapper .search_box .dropdown ul li:last-child{
+            padding-bottom: 0;
+        }
+
+        .wrapper .search_box .dropdown ul li:hover{
+            color: black;
+        }
+
+        .wrapper .search_box .dropdown:before{
+            content: "";
+            position: absolute;
+            top: 18px;
+            right: 20px;
+            border: 8px solid;
+            border-color: #28262c transparent transparent transparent;
+        }
+
+        .wrapper .search_box .search_field{
+            width: 350px;
+            height: 100%;
+            position: relative;
+        }
+
+        .wrapper .search_box .search_field .input{
+            width: 100%;
+            height: 100%;
+            border: 0px;
+            font-size: 16px;
+            padding-left: 20px;
+            padding-right: 38px;
+            color: black;
+        }
+
+        .wrapper .search_box .search_field .fas{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 22px;
+            color: black;
+            cursor: pointer;
+        }
+
+        ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: black;
+        }
+        #sub{
+            margin-top:10px;
+        }
 
     </style>
     <link href="./css/review.css" rel="stylesheet" >

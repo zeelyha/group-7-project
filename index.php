@@ -82,8 +82,8 @@
     </div>   
     <header>
         <ul id="dropdown1" class="dropdown-content">
-          <li><a href="signup.php">Sign Up</a></li>
-          <li><a href="login.php">Log In</a></li>
+          <li ><a href="signup.php" class="black-text">Sign Up</a></li>
+          <li ><a href="login.php" class="black-text">Log In</a></li>
           <li class="divider"></li>
         </ul>
         <nav class="nav-wrapper transparent fixed">
@@ -236,6 +236,7 @@
             //removing smooth scroll on slide-up button click
             $('html').css("scrollBehavior", "auto");
           });
+          $(".dropdown-trigger").dropdown();
         });
       </script>
       
