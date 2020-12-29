@@ -1,6 +1,7 @@
 <?php
+session_start();
+require_once('./includes/functions.php');
 
-$db_conx = mysqli_connect("localhost","root","","group7");
 
 $report="";
 
@@ -11,28 +12,24 @@ if(isset($_POST['submit']) &&
 $emailmobile= $_POST['emailmobile'];
 $password   = $_POST['password'];
 
-$selectsql= "SELECT emailmobile,password FROM signup_table WHERE emailmobile='$emailmobile' AND password='$password' LIMIT 1";
+$res = login($emailmobile, $password);
 
-$selectQuery=mysqli_query($db_conx,$selectsql);
-$check = mysqli_num_rows($selectQuery);
-if($check > 0){
-while($row=mysqli_fetch_array($selectQuery)){
-	header("location:signup.php");
 
-}
+
+if(is_array($res)){
+    $_SESSION['user'] = $res;
+    if(isset($_SESSION['redirect']))
+        header('location:'.$_SESSION['redirect']);
+    header('location: index.php');
 }else{
-$report .="<div style='color:red;'>Incorrect login details</div>";	
+$report .="<div style='color:red;'>".$res."</div>";	
 }
 }
+
+include('includes/header.php');
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="css/signup.css">
-	<title></title>
-</head>
-<body>
+
 <div id="overallWrapper" style="background-color: #fff;">
  <div id="homeAlign">
  <div id="homeLogo">LOGO</div>
@@ -80,6 +77,5 @@ $report .="<div style='color:red;'>Incorrect login details</div>";
  </div>  
  </div> 
 </div>
-</body>
-</html>
+<?php include_once('./includes/footer.php') ?>
 
