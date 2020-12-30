@@ -27,11 +27,16 @@
     
         //make sql call
         $sql = "SELECT review, reviewer, review_date FROM reviews WHERE restaurant_id= $id";
+        $sqle = "SELECT * FROM restaurant WHERE id=$id";
     
         //get query results
         $result = mysqli_query($conn, $sql);
-    
+        $output = mysqli_query($conn, $sqle);
+
         //get result in array format
+        $details = mysqli_fetch_assoc($output);
+        //print_r($details);
+
         $reviews = [];
         while($row =  mysqli_fetch_assoc($result)){
             array_push($reviews, $row);
@@ -56,12 +61,35 @@
     //mysqli_close($conn);
 ?>
 
-<section id="banner">
-    <img src="./imgs/rest_image.jpg" alt="banner" id="banner_image" />
-    
-</section>
 
-<div id="desc">EatAt is a review platform that create or reinforce a communal spirit and influence the consumer's decision. EatAt helps people to seek external information on sources when they have not experienced it themselves. </div>
+
+
+    <?php if($details): ?>
+        <section id="banner">
+            <img src="imgs/<?php echo ($details['image']); ?>" alt="banner" id="banner_image" />
+        </section>
+        <div class="container">
+            <h4><?php echo htmlspecialchars($details['name']);?></h4>
+            <h5 class="red-text"><?php echo htmlspecialchars($details['type']); ?></h5>
+            <ul class="collection">
+                <li class="collection-item"> <i class="material-icons">phone</i>  <?php echo htmlspecialchars($details['phone']);?></li>
+                <li class="collection-item"> <i class="material-icons">language</i>  <?php echo htmlspecialchars($details['website']);?></li>
+                <li class="collection-item"> <i class="material-icons">location_on</i>  <?php echo htmlspecialchars($details['location']);?></li>
+                <li class="collection-item"> <i class="material-icons">schedule</i>  9AM - 8PM</li>
+                <li class="collection-item"> <i class="material-icons">stars</i>
+                <span>      </span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star-half checked"></span> (51)
+                </li>
+            </ul>
+        </div>
+        
+    <?php endif; ?>  
+
+  
 
 <!-- <div class="container" id="info">
     <div class="row">

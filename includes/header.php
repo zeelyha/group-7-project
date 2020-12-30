@@ -42,7 +42,7 @@
         .slider{
             max-width: 1400px;
             display: flex;
-            margin-top: 90px;
+            margin-top: 70px;
         }
         .slider .card{
             flex: 1;
@@ -172,7 +172,7 @@
             pointer-events: none;
         }
         #cap{
-            margin-top:150px;
+            margin-top:100px;
         }
         .wrapper{
             position: absolute;
@@ -272,6 +272,11 @@
         }
         #sub{
             margin-top:10px;
+            margin-bottom: 15px;
+        }
+        .result{
+            margin-top:150px;
+            margin-bottom: 30px;
         }
 
     </style>

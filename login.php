@@ -29,10 +29,9 @@ $report .="<div style='color:red;'>".$res."</div>";
 include('includes/header.php');
 ?>
 
-
+<div class="container" style="margin-top: 150px;">
 <div id="overallWrapper" style="background-color: #fff;">
  <div id="homeAlign">
- <div id="homeLogo">LOGO</div>
 
 <div><?php echo "$report"; ?></div>
 
@@ -45,7 +44,7 @@ include('includes/header.php');
  </div> 
 
   <div id="hffDivider">
- <div id="hffDividerForm"><input type="password" name="password" id="authInput" placeholder="Enter your password" required /></div>  
+ <div id="hffDividerForm" style="margin-top:25px;"><input type="password" name="password" id="authInput" placeholder="Enter your password" required /></div>  
  </div> 
 
 
@@ -54,17 +53,17 @@ include('includes/header.php');
  <div id="hffDividerFormL">
   <span><input type="checkbox" name="remember" value=""></span><span>Remember me</span> 
  </div>
-  <div id="hffDividerFormR">
-   <input type="submit" name="submit" value="LOG IN " id="authLog" /> 
+  <div class="center-align" id="hffDividerFormR">
+   <input type="submit" name="submit" style="margin-top:15px;" class="btn black" value="LOG IN " id="authLog" /> 
   </div>  
  </div>   
  </div> 
 
  <div id="hffDivider">
-<a href="forgot-password" style="color: #0095f6;display:block;text-align: center;text-decoration: none;">Forgot your password?</a>
+<a href="forgot-password" style="color: #0095f6;display:block;text-align: center;margin-top:15px;text-decoration: none;">Forgot your password?</a>
  </div> 
 
- <div id="hffDivider">
+ <div class="center-align" style="margin-top:15px;"id="hffDivider">
 <div id="signupTray">
 <div id="signupAsk">Don't have an account?</div>  
 <a href="signup.php" id="authsignupBtn">SIGN UP</a>
@@ -77,5 +76,8 @@ include('includes/header.php');
  </div>  
  </div> 
 </div>
-<?php include_once('./includes/footer.php') ?>
+</div>
+
+
+<?php include('includes/footer.php'); ?>
 

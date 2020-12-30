@@ -33,16 +33,7 @@
         }
     
         //print_r($items);  
-        echo '<div class="container">
-                <?php foreach($items as $item): ?>
-                    <div class="collection">
-                        <a href="restaurant.php?id=<?php echo $row["id"] ?>" class="collection-item"> 
-                        <div class="title"> <?php echo htmlspecialchars($item["name"])?></div>
-                        <div class="sub-title"> <?php echo htmlspecialchars($item["type"])?></div>
-                        </a>
-                    </div>
-                <?php endforeach; ?>
-               </div>  ';
+       
     }
     
 ?>
@@ -60,23 +51,23 @@
                     </ul>
                 </div>
                 <div class="search_field">
-                    <input type="text" name="search" class="input" placeholder="Search">
-                    <input type="submit" name="submit" id="sub" class="btn black white-text">
+                    <input type="text" name="search" class="input" placeholder="Search...">
+                    <input type="submit" name="submit" id="sub" value="Search" class="btn black white-text">
                 </div>
             </div>
         </div>
     </form>
 
-    <!--<div class="container">
+    <div class="container result">
       <?php foreach($items as $item): ?>
         <div class="collection">
-            <a href="restaurant.php?id=<?php echo $row['id'] ?>" class="collection-item">
+            <a href="restaurant.php?id=<?php echo $item['id'] ?>" class="collection-item">
             <div class="title"> <?php echo htmlspecialchars($item['name'])?></div>
             <div class="sub-title"> <?php echo htmlspecialchars($item['type'])?></div>
             </a>
         </div>
       <?php endforeach; ?>  
-    </div> -->
+    </div>
 
 
     <div class="container center">

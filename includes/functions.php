@@ -1,9 +1,9 @@
 <?php
     function returnConn(){
         $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $db = "group7";
+        $username = "zee";
+        $password = "zee123";
+        $db = "app";
         $conn = new mysqli($servername, $username, $password, $db);
     
         // Check connection
