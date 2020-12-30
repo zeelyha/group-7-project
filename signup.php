@@ -34,7 +34,7 @@
 
 
 
-
+<div class="container" style="margin-top:70px;">
 <div id="overAllWrapper">
  <div id="homeAlign">
  <div id="homefieldForm">
@@ -70,7 +70,7 @@
 
 
 
-  <div id="hffDivider"  class="clearfix">
+  <div id="hffDivider" style="margin-top:15px;" class="clearfix">
  <div id="hffDividerForm">
  <div id="hffDividerFormL">
   <span>By signing up, you agree to our <a href="#" style="    color: #0095f6;
@@ -78,15 +78,15 @@
     margin-top: 5px;
     text-decoration: none;">terms and conditions</a></span> 
  </div>
-  <div id="hffDividerFormR">
-   <input type="submit" name="submit" value="SIGN UP" id="authLog" /> 
+  <div class="center-align" id="hffDividerFormR">
+   <input type="submit" class="btn black" name="submit" value="SIGN UP" id="authLog" /> 
   </div>  
  </div>   
  </div> 
 
 
  <div id="hffDivider">
-<div id="signupTray">
+<div id="signupTray" style="margin-top:15px;" class="center-align">
 <div id="signupAsk">Already have an account?</div>  
 <a href="index.php" id="authsignupBtn">LOG IN</a>
 <div id="signupTerms"></div>
@@ -99,7 +99,7 @@
  </div>  
  </div>
  </div> 
+</div>
 
+<?php include('includes/footer.php'); ?>
 
-</body>
-</html>

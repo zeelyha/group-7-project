@@ -10,26 +10,68 @@
     $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
     //free result from memory
-    mysqli_free_result($result);
+   // mysqli_free_result($result);
 
     //close connection
-    mysqli_close($conn);
+    //mysqli_close($conn);
 ?>
+
+
 
 <?php include('includes/header.php') ?>
 
-    <div class="container center">
-        <div class="input-field">
-            <form action="main.php" method="POST">
-                Search <input name="search" placeholder="Search..." type="text" required>
-                    <i id="icon" class="material-icons small-icon inline black-text">search</i>
-                    <input type="submit">
-            </form>
+<?php
+    if (isset($_POST['submit'])){
+        $search = mysqli_real_escape_string($conn, $_POST['search']);
+    
+        $sqls = "SELECT id, name, type FROM restaurant WHERE name LIKE '%$search%' OR type LIKE '%$search%' ";
+        $res = mysqli_query($conn, $sqls);
+
+        $items = [];
+        while($rowed =  mysqli_fetch_assoc($res)){
+            array_push($items, $rowed);
+        }
+    
+        //print_r($items);  
+       
+    }
+    
+?>
+
+    
+    <form action="main.php" method="post">
+        <div class="wrapper">
+            <div class="search_box">
+                <div class="dropdown">
+                    <div class="default_option">All</div>  
+                    <ul name="column">
+                        <li>All</li>
+                        <li>Search by Name</li>
+                        <li>Search by Type</li>
+                    </ul>
+                </div>
+                <div class="search_field">
+                    <input type="text" name="search" class="input" placeholder="Search...">
+                    <input type="submit" name="submit" id="sub" value="Search" class="btn black white-text">
+                </div>
+            </div>
         </div>
+    </form>
+
+    <div class="container result">
+      <?php foreach($items as $item): ?>
+        <div class="collection">
+            <a href="restaurant.php?id=<?php echo $item['id'] ?>" class="collection-item">
+            <div class="title"> <?php echo htmlspecialchars($item['name'])?></div>
+            <div class="sub-title"> <?php echo htmlspecialchars($item['type'])?></div>
+            </a>
+        </div>
+      <?php endforeach; ?>  
     </div>
 
+
     <div class="container center">
-        <h4>Popular Restaurants in Your Location</h4>
+        <h4 id="cap">Popular Restaurants in Your Location</h4>
     </div>
     <div class="slider owl-carousel">
         <div class="card col s12 m6 l3">

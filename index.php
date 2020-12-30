@@ -85,8 +85,8 @@
     </div>   
     <header>
         <ul id="dropdown1" class="dropdown-content">
-          <li><a href="signup.php">Sign Up</a></li>
-          <li><a href="login.php">Log In</a></li>
+          <li ><a href="signup.php" class="black-text">Sign Up</a></li>
+          <li ><a href="login.php" class="black-text">Log In</a></li>
           <li class="divider"></li>
         </ul>
         <nav class="nav-wrapper transparent fixed">
@@ -104,15 +104,7 @@
               <li><a href="#" class="tooltipped btn-floating btn-small black brighten-2" data-tooltip="Instagram">
                 <i class="fab fa-instagram"></i>
               </a></li>
-              <li>
-                <form>
-                    <div class="input-field col s4 m4 lg4 ">
-                        <input id="search" type="search" required>
-                        <label for="search" class="label-icon"><i class="material-icons white-text inline prefix">search</i></label>
-                        <i class="material-icons">close</i>
-                    </div>
-                </form>
-              </li>
+              
               <li><a href="#"><i class="material-icons medium-icon white-text dropdown-trigger" data-target="dropdown1">person_pin</i></a></li>
             </ul>
             <ul class="sidenav" id="mobile-menu">
@@ -239,6 +231,7 @@
             //removing smooth scroll on slide-up button click
             $('html').css("scrollBehavior", "auto");
           });
+          $(".dropdown-trigger").dropdown();
         });
       </script>
       

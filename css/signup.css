@@ -38,11 +38,11 @@ img{
   max-height: 100%;
 }
 #overallWrapper{
-width: 100%;
+    width: 50%;
     height: auto;
     background-color: #eee;
     color: #333;
-    margin: auto;
+    
 }
 /*#homeAlign{
     width: 30%;
@@ -53,14 +53,13 @@ width: 100%;
 #homefieldForm{
 width: 100%;
 height: auto;
+margin-top: 50px;
 }
 #hffDivider{
     width: 100%;
     margin-bottom: 25px;
 }
-#hffDividerForm{
 
-}
 #authInput{
 width: 100%;
 border:1px solid #eee;
@@ -108,4 +107,7 @@ background-color: #0095f6;
     border: 2px solid #333;
     text-decoration: none;
     font-size: 110%;
+}
+.container{
+    margin-top:30px;
 }
